@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <title>Weather Dashboard</title>
+ {% load static %}
+ <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="icon" type="image/png" size="16x16" href="{% static 'img/logo.png' %}">
+ <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+<div class="main-container">
+ <div class="sub-container">
+  <div class="parent">
+   <div class="div1"> 
+    <h2>Temperature</h2>
+    <h1><i class="fas fa-thermometer-three-quarters fa-xs" style="margin-right: 1rem; color: rgb(255, 187, 0);"></i>{{Data1.Temperature}} °C</h1>
+    <p><i class="fas fa-undo fa-xs" style="margin-right: 0.5rem;"></i>{{difference1}} {{index1}} ago</p>
+   </div>
+   <div class="div2"> 
+    <h2>Humidity</h2>
+    <h1><i class="fas fa-humidity fa-xs"  style="margin-right: 1rem; color: rgb(0, 110, 255);"></i>{{Data1.Humidity}} %</h1>
+    <p><i class="fas fa-undo fa-xs" style="margin-right: 0.5rem;"></i>{{difference1}} {{index1}} ago</p>      
+   </div>
+   <div class="div3"> 
+    <h2>Wind Speed</h2>
+    <h1><i class="fas fa-wind fa-xs" style="margin-right: 1rem; color: rgb(161, 161, 161);"></i>{{Data1.Wind_Speed}} Km/h</h1>
+    <p><i class="fas fa-undo fa-xs" style="margin-right: 0.5rem;"></i>{{difference1}} {{index1}} ago</p> 
+   </div>
+   <div class="div4"> 
+    <h2>Max Wind Gust</h2>
+    <h1><i class="fas fa-wind fa-xs" aria-hidden="true" style="margin-right: 1rem; color: rgb(161, 161, 161);"></i>{{Data1.Max_Wind_Gust}} Km/h</h1>
+    <p><i class="fas fa-undo fa-xs" style="margin-right: 0.5rem;"></i>{{difference1}} {{index1}} ago</p> 
+   </div>
+   <div class="div5"> 
+    <h2>Solar Radiation</h2>
+    <h1><i class="fas fa-sun fa-xs" style="margin-right: 1rem; color: yellow;"></i>{{Data2.Solar_Radiation}} Kw/m<small><sup>2</sup></small></h1>
+    <p><i class="fas fa-undo fa-xs" style="margin-right: 0.5rem;"></i>{{difference2}} {{index2}} ago</p> 
+   </div>
+   <div class="div6"> 
+    <h2>Precipitation</h2>
+    <h1><i class="fas fa-cloud-rain fa-xs" style="margin-right: 1rem; color: rgb(131, 151, 207);"></i>{{Data1.Precipitation}} mm</h1>
+    <p><i class="fas fa-undo fa-xs" style="margin-right: 0.5rem;"></i>{{difference1}} {{index1}} ago</p> 
+   </div>
+  </div>
+ </div>
+</div>
+</body>
+</html>      
