@@ -136,5 +136,5 @@ def index(request):
         context = {"Data1": D1, "Data2": D2, "difference1": diff1, "index1": in1, "difference2": diff2, "index2": in2}
         return render(request, "index.html", context)
     else:
-        return HttpResponse("<h1>Data are not avalaible</h1>") 
+        return HttpResponse("<h1>Data are not available</h1>") 
           
